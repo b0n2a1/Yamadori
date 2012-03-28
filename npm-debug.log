@@ -1,17 +1,14 @@
 info it worked if it ends with ok
-verbose cli [ 'node', '/usr/local/bin/npm', 'install' ]
+verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'express' ]
 info using npm@1.1.0-beta-10
 info using node@v0.6.7
 verbose config file /Users/connjl/.npmrc
 verbose config file /usr/local/etc/npmrc
 verbose config file /usr/local/lib/node_modules/npm/npmrc
 verbose caching /Users/connjl/Heroku/Yamadori/package.json
-verbose loadDefaults node-example@0.0.1
-verbose where, deps [ '/Users/connjl/Heroku/Yamadori', [ 'express' ] ]
+verbose loadDefaults yamadori@0.0.1
 verbose from cache /Users/connjl/Heroku/Yamadori/package.json
-info preinstall node-example@0.0.1
-verbose from cache /Users/connjl/Heroku/Yamadori/package.json
-verbose into /Users/connjl/Heroku/Yamadori [ 'express@2.2.0' ]
+verbose into /Users/connjl/Heroku/Yamadori [ 'express' ]
 verbose cache add express@2.2.0
 verbose cache add [ 'express@2.2.0', null ]
 silly cache add: name, spec, args [ undefined, 'express@2.2.0', [ 'express@2.2.0', null ] ]
@@ -25,73 +22,72 @@ verbose addNamed [ '2.2.0', '2.2.0' ]
 verbose raw, before any munging express/2.2.0
 verbose url resolving [ 'https://registry.npmjs.org/', './express/2.2.0' ]
 verbose url resolved https://registry.npmjs.org/express/2.2.0
+verbose etag "3C8IV1I96MAC8GUQ2925I9XD4"
 http GET https://registry.npmjs.org/express/2.2.0
 http 200 https://registry.npmjs.org/express/2.2.0
 silly get cb [ 200,
 silly get cb   { vary: 'Accept',
-silly get cb     server: 'CouchDB/1.1.0 (Erlang OTP/R14B04)',
-silly get cb     etag: '"3C8IV1I96MAC8GUQ2925I9XD4"',
-silly get cb     date: 'Sun, 26 Feb 2012 05:10:42 GMT',
+silly get cb     server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+silly get cb     etag: '"7HUSBHA210DQP1CBMJ1EXVAIC"',
+silly get cb     date: 'Wed, 28 Mar 2012 04:58:24 GMT',
 silly get cb     'content-type': 'application/json',
 silly get cb     'content-length': '1008' } ]
-verbose mkdir (expected) error ENOENT, no such file or directory '/Users/connjl/.npm/express/2.2.0'
-verbose mkdir done: /Users/connjl/.npm/express/2.2.0 755
 verbose bin dist [ '0.6-ares1.7.5-DEV-evundefined-openssl0.9.8r-v83.6.6.15-darwin-x64-11.3.0',
 verbose bin dist   { shasum: 'ab38a7eaad67a1c28495021a798d234086d73dea',
 verbose bin dist     tarball: 'http://registry.npmjs.org/express/-/express-2.2.0.tgz' } ]
 verbose addRemoteTarball [ 'https://registry.npmjs.org/express/-/express-2.2.0.tgz',
 verbose addRemoteTarball   'ab38a7eaad67a1c28495021a798d234086d73dea' ]
-verbose mkdir (expected) error ENOENT, no such file or directory '/var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1330233042028'
-verbose mkdir (expected) error ENOENT, no such file or directory '/var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1330233042028/1330233042029-0.9011342183221132'
-verbose mkdir done: /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1330233042028/1330233042029-0.9011342183221132 755
-verbose fetch to /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1330233042028/1330233042029-0.9011342183221132/tmp.tgz
+verbose mkdir (expected) error ENOENT, no such file or directory '/var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1332910704196'
+verbose mkdir (expected) error ENOENT, no such file or directory '/var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1332910704196/1332910704196-0.2720822689589113'
+verbose mkdir done: /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1332910704196/1332910704196-0.2720822689589113 755
+verbose fetch to /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1332910704196/1332910704196-0.2720822689589113/tmp.tgz
 http GET https://registry.npmjs.org/express/-/express-2.2.0.tgz
 http 200 https://registry.npmjs.org/express/-/express-2.2.0.tgz
 silly updated sha bytes 25441
 info shasum ab38a7eaad67a1c28495021a798d234086d73dea
-info shasum /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1330233042028/1330233042029-0.9011342183221132/tmp.tgz
-verbose mkdir (expected) error ENOENT, no such file or directory '/var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1330233042028/1330233042029-0.9011342183221132/___package.npm'
-verbose mkdir done: /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1330233042028/1330233042029-0.9011342183221132/___package.npm 755
+info shasum /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1332910704196/1332910704196-0.2720822689589113/tmp.tgz
+verbose mkdir (expected) error ENOENT, no such file or directory '/var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1332910704196/1332910704196-0.2720822689589113/___package.npm'
+verbose mkdir done: /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1332910704196/1332910704196-0.2720822689589113/___package.npm 755
 verbose unpack_ uid, gid [ undefined, undefined ]
-verbose unpackTarget /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1330233042028/1330233042029-0.9011342183221132/package
+verbose unpackTarget /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1332910704196/1332910704196-0.2720822689589113/package
 silly gunzTarPerm modes [ '755', '644' ]
 silly afterUntar undefined
-silly asyncMap in gTP /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1330233042028/1330233042029-0.9011342183221132/___package.npm/package
-silly asyncMap in gTP /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1330233042028/1330233042029-0.9011342183221132/___package.npm/package/.npmignore
-silly asyncMap in gTP /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1330233042028/1330233042029-0.9011342183221132/___package.npm/package/History.md
-silly asyncMap in gTP /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1330233042028/1330233042029-0.9011342183221132/___package.npm/package/index.js
-silly asyncMap in gTP /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1330233042028/1330233042029-0.9011342183221132/___package.npm/package/LICENSE
-silly asyncMap in gTP /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1330233042028/1330233042029-0.9011342183221132/___package.npm/package/Makefile
-silly asyncMap in gTP /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1330233042028/1330233042029-0.9011342183221132/___package.npm/package/package.json
-silly asyncMap in gTP /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1330233042028/1330233042029-0.9011342183221132/___package.npm/package/Readme.md
-silly asyncMap in gTP /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1330233042028/1330233042029-0.9011342183221132/___package.npm/package/bin
-silly asyncMap in gTP /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1330233042028/1330233042029-0.9011342183221132/___package.npm/package/bin/express
-silly asyncMap in gTP /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1330233042028/1330233042029-0.9011342183221132/___package.npm/package/lib
-silly asyncMap in gTP /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1330233042028/1330233042029-0.9011342183221132/___package.npm/package/lib/express.js
-silly asyncMap in gTP /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1330233042028/1330233042029-0.9011342183221132/___package.npm/package/lib/http.js
-silly asyncMap in gTP /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1330233042028/1330233042029-0.9011342183221132/___package.npm/package/lib/https.js
-silly asyncMap in gTP /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1330233042028/1330233042029-0.9011342183221132/___package.npm/package/lib/request.js
-silly asyncMap in gTP /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1330233042028/1330233042029-0.9011342183221132/___package.npm/package/lib/response.js
-silly asyncMap in gTP /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1330233042028/1330233042029-0.9011342183221132/___package.npm/package/lib/utils.js
-silly asyncMap in gTP /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1330233042028/1330233042029-0.9011342183221132/___package.npm/package/lib/view.js
-silly asyncMap in gTP /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1330233042028/1330233042029-0.9011342183221132/___package.npm/package/lib/view
-silly asyncMap in gTP /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1330233042028/1330233042029-0.9011342183221132/___package.npm/package/lib/view/partial.js
-silly asyncMap in gTP /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1330233042028/1330233042029-0.9011342183221132/___package.npm/package/lib/view/view.js
-verbose gunzed /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1330233042028/1330233042029-0.9011342183221132/___package.npm/package
-verbose rm'ed /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1330233042028/1330233042029-0.9011342183221132/package
-verbose renamed [ '/var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1330233042028/1330233042029-0.9011342183221132/___package.npm/package',
-verbose renamed   '/var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1330233042028/1330233042029-0.9011342183221132/package' ]
-verbose caching /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1330233042028/1330233042029-0.9011342183221132/package/package.json
+silly asyncMap in gTP /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1332910704196/1332910704196-0.2720822689589113/___package.npm/package
+silly asyncMap in gTP /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1332910704196/1332910704196-0.2720822689589113/___package.npm/package/.npmignore
+silly asyncMap in gTP /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1332910704196/1332910704196-0.2720822689589113/___package.npm/package/History.md
+silly asyncMap in gTP /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1332910704196/1332910704196-0.2720822689589113/___package.npm/package/index.js
+silly asyncMap in gTP /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1332910704196/1332910704196-0.2720822689589113/___package.npm/package/LICENSE
+silly asyncMap in gTP /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1332910704196/1332910704196-0.2720822689589113/___package.npm/package/Makefile
+silly asyncMap in gTP /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1332910704196/1332910704196-0.2720822689589113/___package.npm/package/package.json
+silly asyncMap in gTP /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1332910704196/1332910704196-0.2720822689589113/___package.npm/package/Readme.md
+silly asyncMap in gTP /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1332910704196/1332910704196-0.2720822689589113/___package.npm/package/bin
+silly asyncMap in gTP /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1332910704196/1332910704196-0.2720822689589113/___package.npm/package/bin/express
+silly asyncMap in gTP /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1332910704196/1332910704196-0.2720822689589113/___package.npm/package/lib
+silly asyncMap in gTP /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1332910704196/1332910704196-0.2720822689589113/___package.npm/package/lib/express.js
+silly asyncMap in gTP /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1332910704196/1332910704196-0.2720822689589113/___package.npm/package/lib/http.js
+silly asyncMap in gTP /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1332910704196/1332910704196-0.2720822689589113/___package.npm/package/lib/https.js
+silly asyncMap in gTP /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1332910704196/1332910704196-0.2720822689589113/___package.npm/package/lib/request.js
+silly asyncMap in gTP /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1332910704196/1332910704196-0.2720822689589113/___package.npm/package/lib/response.js
+silly asyncMap in gTP /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1332910704196/1332910704196-0.2720822689589113/___package.npm/package/lib/utils.js
+silly asyncMap in gTP /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1332910704196/1332910704196-0.2720822689589113/___package.npm/package/lib/view.js
+silly asyncMap in gTP /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1332910704196/1332910704196-0.2720822689589113/___package.npm/package/lib/view
+silly asyncMap in gTP /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1332910704196/1332910704196-0.2720822689589113/___package.npm/package/lib/view/partial.js
+silly asyncMap in gTP /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1332910704196/1332910704196-0.2720822689589113/___package.npm/package/lib/view/view.js
+verbose gunzed /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1332910704196/1332910704196-0.2720822689589113/___package.npm/package
+verbose rm'ed /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1332910704196/1332910704196-0.2720822689589113/package
+verbose renamed [ '/var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1332910704196/1332910704196-0.2720822689589113/___package.npm/package',
+verbose renamed   '/var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1332910704196/1332910704196-0.2720822689589113/package' ]
+verbose caching /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1332910704196/1332910704196-0.2720822689589113/package/package.json
 verbose loadDefaults express@2.2.0
 verbose tarball contents [ 'package', 'tmp.tgz' ]
-verbose from cache /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1330233042028/1330233042029-0.9011342183221132/package/package.json
-verbose pack /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1330233042028/1330233042029-0.9011342183221132/package
-verbose pack /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1330233042028/1330233042029-0.9011342183221132/package /Users/connjl/.npm/express/2.2.0/package.tgz
-silly makeList /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1330233042028/1330233042029-0.9011342183221132/package
-silly dir, dirLen [ '/var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1330233042028/1330233042029-0.9011342183221132/package',
+verbose from cache /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1332910704196/1332910704196-0.2720822689589113/package/package.json
+verbose pack /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1332910704196/1332910704196-0.2720822689589113/package
+verbose pack /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1332910704196/1332910704196-0.2720822689589113/package /Users/connjl/.npm/express/2.2.0/package.tgz
+silly makeList /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1332910704196/1332910704196-0.2720822689589113/package
+silly dir, dirLen [ '/var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1332910704196/1332910704196-0.2720822689589113/package',
 silly dir, dirLen   108 ]
 verbose tarball /Users/connjl/.npm/express/2.2.0/package.tgz
-verbose parent /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1330233042028/1330233042029-0.9011342183221132/package
+verbose parent /var/folders/y0/qz46f64j1t7c43qdt_mq_dlh0000gn/T/npm-1332910704196/1332910704196-0.2720822689589113/package
 verbose mkdir (expected) error ENOENT, no such file or directory '/Users/connjl/.npm/express/2.2.0/___package.npm'
 verbose mkdir done: /Users/connjl/.npm/express/2.2.0/___package.npm 755
 verbose unpack_ uid, gid [ undefined, undefined ]
@@ -125,8 +121,8 @@ verbose renamed [ '/Users/connjl/.npm/express/2.2.0/___package.npm/package',
 verbose renamed   '/Users/connjl/.npm/express/2.2.0/package' ]
 verbose caching /Users/connjl/.npm/express/2.2.0/package/package.json
 verbose loadDefaults express@2.2.0
-silly updated sha bytes 25598
-info shasum 045e05b9d95523940266c5b428d2f20d7bf4762e
+silly updated sha bytes 25597
+info shasum 089f00046c8e94c19f3375cb18bbc0fe994f7c89
 info shasum /Users/connjl/.npm/express/2.2.0/package.tgz
 verbose from cache /Users/connjl/.npm/express/2.2.0/package/package.json
 verbose chmod /Users/connjl/.npm/express/2.2.0/package.tgz 644
@@ -153,7 +149,7 @@ silly resolved     _engineSupported: false,
 silly resolved     _npmVersion: '1.1.0-beta-10',
 silly resolved     _nodeVersion: 'v0.6.7',
 silly resolved     _defaultsLoaded: true,
-silly resolved     dist: { shasum: '045e05b9d95523940266c5b428d2f20d7bf4762e' } } ]
+silly resolved     dist: { shasum: '089f00046c8e94c19f3375cb18bbc0fe994f7c89' } } ]
 info into /Users/connjl/Heroku/Yamadori express@2.2.0
 info installOne express@2.2.0
 verbose installOne cb express@2.2.0
@@ -163,7 +159,7 @@ ERR! Required: {"node":">= 0.4.1 < 0.5.0"}
 ERR! Actual:   {"npm":"1.1.0-beta-10","node":"0.6.7"}
 ERR! 
 ERR! System Darwin 11.3.0
-ERR! command "node" "/usr/local/bin/npm" "install"
+ERR! command "node" "/usr/local/bin/npm" "install" "express"
 ERR! cwd /Users/connjl/Heroku/Yamadori
 ERR! node -v v0.6.7
 ERR! npm -v 1.1.0-beta-10
