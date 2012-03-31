@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Hello World</title>
+		<link rel="stylesheet" href="jquery-ui-1.8.18.custom.css" type="text/css" media="screen" title="no title" charset="utf-8">
+		
+		<link rel="stylesheet" href="site.css" type="text/css" media="screen" title="no title" charset="utf-8">
+		<script src="jquery-1.7.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="jquery-ui-1.8.18.custom.min.js" type="text/javascript" charset="utf-8"></script>
+
+	</head>
+	<body>
+		<h1>Twitter Search</h1>
+		<input type="text" value="" id="searchval">
+		<button onclick="gettwit();">Search</button>
+		<div id="twithere"></div>
+		<script type="text/javascript">
+			function gettwit(){
+				var searchval = $("#searchval").val();
+				$.ajax({
+					url:"http://empty-moon-7259.herokuapp.com/twit/" + searchval,
+					type:'GET',
+					success: function(jsondata){
+						$("#twithere").text(jsondata); 
+						//printjson(jsondata);
+					},
+					error: function(jqXHR, textStatus, errorThrown) {
+						$("#twithere").text('error ' + textStatus + " " + errorThrown);
+				    }
+				});
+			}
+			
+			function printjson(jsondata){
+				var data = $.parseJSON(jsondata)
+				var items = [];
+
+				$.each(data, function(key, val) {
+					items.push('<li id="' + key + '">' + val + '</li>');
+				});
+
+				$('<ul/>', {
+					'class': 'my-new-list',
+					html: items.join('')
+				}).appendTo('#twithere');
+			}
+			
+			
+		</script>
+	
+	</body>
+</html>

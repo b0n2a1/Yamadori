@@ -1,12 +1,39 @@
-var express = require('express');
+var http = require("http"),
+fs = require("fs"),
+querystring = require("querystring");
 
-var app = express.createServer(express.logger());
-
-app.get('/', function(request, response) {
-  response.send('Hello World!');
+http.createServer(function(req, res){
+	var data = "";
+	
+	if(req.method == "GET"){
+		getFile(__dirname + "/public/index.html", res);		
+	}
+	
+	if(req.method == "POST"){
+		req.on("data", function(chunk){
+			data += chunk;
+		});
+		req.on("end", function(){
+			var params = querystring.parse(data),
+			userName = params.firstname + " " +params.lastname,
+			html = "<!doctype html>" +
+			"<html><head><title>Hello " + userName + 
+			"</title></head>" +
+			"<body><h1>Hello, " + userName +
+			"!</h1></body></html>";
+			res.end(html);
+		});
+	}
 });
+app.listen(process.env.PORT || 3000);
 
-var port = process.env.PORT || 3000;
-app.listen(port, function() {
-  console.log("Listening on " + port);
-});
+function getFile(localPath, res){
+	fs.readFile(localPath, function(err,contents){
+		if(!err){
+			res.end(contents);
+		}else{
+			res.writeHead(500);
+			res.end();
+		}
+	});
+}
