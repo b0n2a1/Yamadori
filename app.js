@@ -25,7 +25,7 @@ http.createServer(function(req, res){
 		});
 	}
 });
-app.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT || 3000); 
 
 function getFile(localPath, res){
 	fs.readFile(localPath, function(err,contents){
