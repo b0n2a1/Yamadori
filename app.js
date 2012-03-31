@@ -1,8 +1,10 @@
 var http = require("http"),
 fs = require("fs"),
 querystring = require("querystring");
+var express = require('express');
+var app = express.createServer();
 
-http.createServer(function(req, res){
+express.createServer(function(req, res){
 	var data = "";
 	
 	if(req.method == "GET"){
