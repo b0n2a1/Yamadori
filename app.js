@@ -18,12 +18,8 @@ express.createServer(function(req, res){
 		req.on("end", function(){
 			var params = querystring.parse(data),
 			userName = params.firstname + " " +params.lastname,
-			html = "<!doctype html>" +
-			"<html><head><title>Hello " + userName + 
-			"</title></head>" +
-			"<body><h1>Hello, " + userName +
-			"!</h1></body></html>";
-			res.end(html);
+			data = "Hello " + userName;
+			res.json(JSON.stringify(data));
 		});
 	}
 }).listen(process.env.PORT || 3000); 
